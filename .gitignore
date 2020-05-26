@@ -1,0 +1,9 @@
+.idea
+/config/database.yml
+
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+!/tmp/pid/.keep
+/.git
