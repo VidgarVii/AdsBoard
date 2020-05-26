@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username:
+  password:
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: ads_bord_test
+
+production:
+  <<: *default
+  database: ads_bord_production
+
+development:
+  <<: *default
+  database: ads_bord_development
