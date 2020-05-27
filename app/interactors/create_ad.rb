@@ -7,6 +7,6 @@ class CreateAd
     ad = Ad.create!(context.ad_fields)
     context.ad = ad
   rescue StandardError => e
-    context.fail!(error: e.to_s)
+    context.fail!(errors: { errors: e.to_s })
   end
 end

@@ -7,7 +7,7 @@ class ValidateParams
     if params_valid?
       context.ad_fields = contract.to_h
     else
-      context.fail!(errors: contract.errors.to_h)
+      context.fail!(errors: { errors: contract.errors.to_h })
     end
   end
 

@@ -6,19 +6,18 @@ require_relative '../config/environment'
 
 require 'spec_helper'
 require 'rack/test'
+require 'rspec'
 require 'test_prof/recipes/rspec/let_it_be'
 require "dry/validation/matchers"
 
-RSpec.describe 'The HelloWorld App' do
+module RSpecMixin
   include Rack::Test::Methods
 
   def app
-    Sinatra::Application
+    AdsBoard
   end
+end
 
-  # it "says hello" do
-  #   get '/'
-  #   expect(last_response).to be_ok
-  #   expect(last_response.body).to eq('Hello World')
-  # end
+RSpec.configure do |c|
+  c.include RSpecMixin
 end
