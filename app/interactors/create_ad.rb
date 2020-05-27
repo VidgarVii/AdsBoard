@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class CreateAd
   include Interactor
-
 
   def call
     ad = Ad.new(context.ad_fields)

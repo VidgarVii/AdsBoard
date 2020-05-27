@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 ENV['APP_ENV'] = 'test'
 
 require 'spec_helper'
 require 'application'
 require 'rack/test'
-require "test_prof/recipes/rspec/let_it_be"
+require 'test_prof/recipes/rspec/let_it_be'
 
 RSpec.describe 'The HelloWorld App' do
   include Rack::Test::Methods
