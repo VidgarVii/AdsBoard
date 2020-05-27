@@ -3,18 +3,12 @@ class CreateAd
 
 
   def call
-    ad = Ad.new(
-        title: context.title,
-        description: context.description,
-        city: context.city,
-        user_id: context.user_id,
-    )
+    ad = Ad.new(context.ad_fields)
+
     if ad.save
       context.ad = ad
     else
-      context.fail!
+      context.fail!(ad.errors.messages)
     end
   end
-
-
 end

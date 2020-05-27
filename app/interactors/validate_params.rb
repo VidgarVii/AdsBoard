@@ -5,7 +5,7 @@ class ValidateParams
 
   def call
     if params_valid?
-      make_params
+      context.ad_fields = contract.to_h
     else
       context.fail!(errors: contract.errors.to_h)
     end
@@ -14,14 +14,14 @@ class ValidateParams
   private
 
   def params_valid?
-      contract.success?
+    contract.success?
   end
 
   def make_params
-    context.title       = context.ad_params[:title]
-    context.description = context.ad_params[:description]
-    context.city        = context.ad_params[:city]
-    context.user_id     = context.ad_params[:user_id]
+    context.title       = context.ad_params['title']
+    context.description = context.ad_params['description']
+    context.city        = context.ad_params['city']
+    context.user_id     = context.ad_params['user_id']
   end
 
   def contract
