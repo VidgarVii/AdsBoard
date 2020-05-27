@@ -2,10 +2,12 @@
 
 ENV['APP_ENV'] = 'test'
 
+require_relative '../config/environment'
+
 require 'spec_helper'
-require 'application'
 require 'rack/test'
 require 'test_prof/recipes/rspec/let_it_be'
+require "dry/validation/matchers"
 
 RSpec.describe 'The HelloWorld App' do
   include Rack::Test::Methods
