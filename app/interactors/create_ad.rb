@@ -4,12 +4,9 @@ class CreateAd
   include Interactor
 
   def call
-    ad = Ad.new(context.ad_fields)
-
-    if ad.save
-      context.ad = ad
-    else
-      context.fail!(ad.errors.messages)
-    end
+    ad = Ad.create!(context.ad_fields)
+    context.ad = ad
+  rescue StandardError => e
+    context.fail!(error: e.to_s)
   end
 end
