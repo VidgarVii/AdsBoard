@@ -13,11 +13,11 @@ class AdsBoard < Sinatra::Base
   register Sinatra::I18n
 
   namespace '/api/v1' do
-    get '/ads' do
+    get '/ad' do
       Ad.all.to_json # TODO: pagin? only user ad?
     end
 
-    post '/ads' do
+    post '/ad' do
       content_type :json
 
       result = RecordingAd.call(ad_params: JSON.parse(request.body.read))
