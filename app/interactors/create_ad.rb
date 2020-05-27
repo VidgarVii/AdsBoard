@@ -5,7 +5,7 @@ class CreateAd
 
   def call
     ad = Ad.create!(context.ad_fields)
-    context.ad = ad
+    context.ad = { ad: ad }
   rescue StandardError => e
     context.fail!(errors: { errors: e.to_s })
   end

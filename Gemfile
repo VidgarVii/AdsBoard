@@ -19,6 +19,7 @@ gem 'dry-validation'       # Provided pattern Contact
 gem 'interactor', '~> 3.0' # Provided pattern Interactor
 gem 'dry-validation-matchers'
 group :test do
+  gem 'rack-test'
   gem 'rspec'              # Test
   gem 'dry-validation-matchers'
   gem 'test-prof'          # Provided simple methods for init objects

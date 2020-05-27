@@ -132,6 +132,7 @@ DEPENDENCIES
   interactor (~> 3.0)
   pg
   puma
+  rack-test
   rake
   rspec
   sinatra

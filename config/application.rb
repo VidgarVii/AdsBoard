@@ -27,7 +27,7 @@ class AdsBoard < Sinatra::Base
       if result.success?
         result.ad.to_json
       else
-        result.errors.to_json
+        error 400, result.errors.to_json
       end
     end
   end
