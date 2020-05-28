@@ -14,7 +14,7 @@ Sinatra-based API service for create/get Ads
 * rackup
 * open localhost:9292/api/v1/ads
 
-##Use
+## Use
 
 **Return collection ads**
 
