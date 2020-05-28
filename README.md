@@ -5,7 +5,7 @@ Training application for a course on micro service architecture.
 
 Sinatra-based API service for create/get Ads
 
-##Install
+## Install
 
 * bundle install
 * cp config/database.example.yml config/database.yml
