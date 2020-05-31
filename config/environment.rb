@@ -13,6 +13,7 @@ require 'sinatra/contrib'
 require 'sinatra/i18n'
 
 require_relative 'application'
+require_relative 'ads_board'
 require_relative '../app/interactors/validate_params'
 require_relative '../app/contracts/new_ad_contract'
 require_relative '../app/interactors/create_ad'
