@@ -18,6 +18,9 @@ module RSpecMixin
   end
 end
 
-RSpec.configure do |c|
-  c.include RSpecMixin
+Dir[AdsBoard.root.join('spec/support/**/*.rb')].sort.each { |f| require f }
+
+RSpec.configure do |config|
+  config.include RSpecMixin
+  config.include ClientHelpers, type: :client
 end
