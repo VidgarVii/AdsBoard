@@ -1,7 +1,7 @@
 # AdsBoard
-Micro-service AdsBoard
+Microservice AdsBoard
 
-Training application for a course on micro service architecture.
+Training application for a course on microservice architecture.
 
 Sinatra-based API service for create/get Ads
 
