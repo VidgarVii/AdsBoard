@@ -3,6 +3,9 @@ Microservice AdsBoard
 
 Training application for a course on microservice architecture.
 
+- [Auth](https://github.com/VidgarVii/Auth)
+- [Geocoder](https://github.com/VidgarVii/Geocoder)
+
 Sinatra-based API service for create/get Ads
 
 ## Install
