@@ -17,13 +17,6 @@ class ValidateParams
     contract.success?
   end
 
-  def make_params
-    context.title       = context.ad_params['title']
-    context.description = context.ad_params['description']
-    context.city        = context.ad_params['city']
-    context.user_id     = context.ad_params['user_id']
-  end
-
   def contract
     @contract ||= NewAdContract.new.call(context.ad_params)
   end

@@ -2,27 +2,25 @@
 
 describe CreateAd do
   describe '.call' do
-    subject { described_class.call(ad_fields: ad_fields) }
+    subject { described_class.call(ad_fields: ad_fields, user_id: 101) }
 
-    context 'when succeeds' do
+    context 'when valid params' do
       let(:ad_fields) do
         {
           title: 'title',
           description: 'desc',
-          city: 'test',
-          user_id: 1
+          city: 'test'
         }
       end
 
       it { is_expected.to be_a_success }
     end
 
-    context 'when fail' do
+    context 'when invalid params' do
       let(:ad_fields) do
         {
           title: 'title',
-          description: 'desc',
-          city: 'test'
+          description: 'desc'
         }
       end
 

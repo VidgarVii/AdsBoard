@@ -9,12 +9,17 @@ gem 'rake'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem 'sinatra-i18n'
+gem 'faraday'
+gem 'faraday_middleware'
+
+gem 'derailed_benchmarks', group: :development
 
 # DB
 gem 'pg'
 gem 'sinatra-activerecord'
 gem 'tux'                  # Sinatra console
 
+gem 'dry-initializer'
 gem 'dry-validation'       # Provided pattern Contact
 gem 'interactor', '~> 3.0' # Provided pattern Interactor
 
