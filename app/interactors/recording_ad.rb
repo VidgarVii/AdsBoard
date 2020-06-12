@@ -3,5 +3,9 @@
 class RecordingAd
   include Interactor::Organizer
 
-  organize Authentication, ValidateParams, CreateAd, GeocodeCity
+  organize Authentication,
+    ValidateParams,
+    CreateAd,
+    GeocodeCity,
+    SaveCoordinatesCityInAd
 end
