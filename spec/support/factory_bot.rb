@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
 
@@ -5,5 +7,3 @@ RSpec.configure do |config|
     FactoryBot.find_definitions
   end
 end
-
-FactoryBot.define { to_create { |model| model.save } }

@@ -11,7 +11,7 @@ module AuthService
     end
 
     def geocode(city)
-      response = connection.post('geocode', city:  city)
+      response = connection.post('geocode', city: city)
 
       response.body
     end

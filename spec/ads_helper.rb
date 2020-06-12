@@ -8,7 +8,7 @@ require 'spec_helper'
 require 'rack/test'
 require 'rspec'
 require 'test_prof/recipes/rspec/let_it_be'
-require "dry/validation/matchers"
+require 'dry/validation/matchers'
 
 module RSpecMixin
   include Rack::Test::Methods

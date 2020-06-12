@@ -2,7 +2,7 @@
 
 class Authentication
   include Interactor
-  AUTH_TOKEN = /\ABearer (?<token>.+)\z/
+  AUTH_TOKEN = /\ABearer (?<token>.+)\z/.freeze
 
   def call
     user_id = auth_client.auth(matched_token)

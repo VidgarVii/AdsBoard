@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe GeocodeCity do
   describe '.call' do
     subject { described_class.call(ad: ad) }
@@ -8,7 +10,7 @@ describe GeocodeCity do
       let_it_be(:ad) { create :ad, city: 'Чебоксары' }
 
       before do
-        allow(service_client).to receive(:geocode).with('Чебоксары').and_return({'coordinates' => {"lat"=>56, "lon"=>47}})
+        allow(service_client).to receive(:geocode).with('Чебоксары').and_return({ 'coordinates' => { 'lat' => 56, 'lon' => 47 } })
         allow(AuthService::Client).to receive(:new).and_return(service_client)
       end
 
@@ -20,7 +22,7 @@ describe GeocodeCity do
       let_it_be(:ad) { create :ad }
 
       before do
-        allow(service_client).to receive(:geocode).with(ad.city).and_return({'errors' => 'Some error'})
+        allow(service_client).to receive(:geocode).with(ad.city).and_return({ 'errors' => 'Some error' })
         allow(AuthService::Client).to receive(:new).and_return(service_client)
       end
 

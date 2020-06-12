@@ -16,5 +16,4 @@ class CreateAd
   def ad_params
     context.ad_fields.merge(user_id: context.user_id)
   end
-
 end

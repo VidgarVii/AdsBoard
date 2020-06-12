@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 describe SaveCoordinatesCityInAd do
-  subject { described_class.call(ad: ad, coordinates: { "lat" => 56, "lon" => 47 }) }
+  subject { described_class.call(ad: ad, coordinates: { 'lat' => 56, 'lon' => 47 }) }
 
   describe '.call' do
     let(:ad) { create :ad }
