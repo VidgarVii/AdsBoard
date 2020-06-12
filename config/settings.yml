@@ -1,0 +1,4 @@
+microservices:
+  auth: 'http://localhost:3010/v1'
+  geocoder: 'http://localhost:3020/v1'
+
