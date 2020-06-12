@@ -16,8 +16,8 @@ class AdsBoard < Application
           ad_params:  JSON.parse(request.body.read)
       )
 
-      if result.success?
-        {ad: result.ad }.to_json
+      if result.ad
+        { ad: result.ad }.to_json
       else
         error 400, result.errors.to_json
       end
