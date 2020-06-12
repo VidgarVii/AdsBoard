@@ -11,7 +11,10 @@ class AdsBoard < Application
     post '/ads' do
       content_type :json
 
-      result = RecordingAd.call(ad_params: JSON.parse(request.body.read))
+      result = RecordingAd.call(
+          auth_token: request.env['HTTP_AUTHORIZATION'],
+          ad_params:  JSON.parse(request.body.read)
+      )
 
       if result.success?
         result.ad.to_json
