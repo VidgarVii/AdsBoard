@@ -1,6 +1,7 @@
 describe GeocodeCity do
   describe '.call' do
-    subject { described_class.call(ad: {ad: ad }) }
+    subject { described_class.call(ad: ad) }
+
     let(:service_client) { instance_double('Client') }
 
     context 'when city defined' do

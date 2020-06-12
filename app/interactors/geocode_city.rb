@@ -7,7 +7,7 @@ class GeocodeCity
   # {"lat"=>56.1438298, "lon"=>47.2489782} 200
   # {"errors"=>"Coordinates undefined"} 404
   def call
-    response = auth_client.geocode(context.ad[:ad].city)
+    response = auth_client.geocode(context.ad.city)
 
     context.coordinates = response.fetch('coordinates') do
       context.fail!(errors: response.fetch('errors'))

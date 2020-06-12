@@ -17,7 +17,7 @@ class AdsBoard < Application
       )
 
       if result.success?
-        result.ad.to_json
+        {ad: result.ad }.to_json
       else
         error 400, result.errors.to_json
       end

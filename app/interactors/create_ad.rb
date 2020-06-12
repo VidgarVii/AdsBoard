@@ -5,7 +5,8 @@ class CreateAd
 
   def call
     ad = Ad.create!(ad_params)
-    context.ad = { ad: ad }
+
+    context.ad = ad
   rescue StandardError => e
     context.fail!(errors: { errors: e.to_s })
   end
