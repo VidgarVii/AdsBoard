@@ -10,7 +10,6 @@ describe ValidateParams do
           title: 'title',
           description: 'desc',
           city: 'test',
-          user_id: 1
         }
       end
 
@@ -22,7 +21,6 @@ describe ValidateParams do
         {
           title: 'title',
           description: 'desc',
-          city: 'test'
         }
       end
 
