@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe AuthService::Client, type: :client do
   subject(:client) { described_class.new(connection: connection) }
 
@@ -6,7 +8,7 @@ describe AuthService::Client, type: :client do
   end
 
   let(:status) { 200 }
-  let(:headers) { {'Content-Type' => 'application/json'} }
+  let(:headers) { { 'Content-Type' => 'application/json' } }
   let(:body) { {} }
 
   describe '#auth' do
@@ -14,7 +16,7 @@ describe AuthService::Client, type: :client do
 
     context 'when valid_token' do
       let(:user_id) { 101 }
-      let(:body) { { 'meta' => {'user_id' => user_id}} }
+      let(:body) { { 'meta' => { 'user_id' => user_id } } }
 
       it 'returns user_id' do
         is_expected.to eq user_id

@@ -11,4 +11,5 @@ class Application < Sinatra::Base
   set :locales, Application.root.join('config', 'locales', 'en.yml')
 
   register Sinatra::I18n
+  register Config
 end

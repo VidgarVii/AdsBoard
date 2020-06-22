@@ -11,7 +11,7 @@ gem 'sinatra-contrib'
 gem 'sinatra-i18n'
 gem 'faraday'
 gem 'faraday_middleware'
-
+gem 'config'
 gem 'derailed_benchmarks', group: :development
 
 # DB
@@ -24,6 +24,7 @@ gem 'dry-validation'       # Provided pattern Contact
 gem 'interactor', '~> 3.0' # Provided pattern Interactor
 
 group :test do
+  gem 'factory_bot'
   gem 'rack-test'
   gem 'rspec'              # Test
   gem 'dry-validation-matchers'

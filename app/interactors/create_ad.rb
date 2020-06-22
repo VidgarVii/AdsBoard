@@ -5,7 +5,8 @@ class CreateAd
 
   def call
     ad = Ad.create!(ad_params)
-    context.ad = { ad: ad }
+
+    context.ad = ad
   rescue StandardError => e
     context.fail!(errors: { errors: e.to_s })
   end
@@ -15,5 +16,4 @@ class CreateAd
   def ad_params
     context.ad_fields.merge(user_id: context.user_id)
   end
-
 end

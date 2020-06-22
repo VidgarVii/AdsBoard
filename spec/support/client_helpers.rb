@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ClientHelpers
   def connection
     Faraday.new do |conn|

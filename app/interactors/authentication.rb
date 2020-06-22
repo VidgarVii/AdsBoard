@@ -2,7 +2,7 @@
 
 class Authentication
   include Interactor
-  AUTH_TOKEN = /\ABearer (?<token>.+)\z/
+  AUTH_TOKEN = /\ABearer (?<token>.+)\z/.freeze
 
   def call
     user_id = auth_client.auth(matched_token)
@@ -24,6 +24,6 @@ class Authentication
   end
 
   def auth_client
-    @auth_service ||= AuthService::Client.new
+    @auth_service ||= AuthService::Client.new(url: Settings.microservices.auth)
   end
 end

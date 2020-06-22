@@ -9,7 +9,7 @@ describe ValidateParams do
         {
           title: 'title',
           description: 'desc',
-          city: 'test',
+          city: 'test'
         }
       end
 
@@ -20,7 +20,7 @@ describe ValidateParams do
       let(:ad_fields) do
         {
           title: 'title',
-          description: 'desc',
+          description: 'desc'
         }
       end
 
