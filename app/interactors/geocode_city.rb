@@ -17,6 +17,6 @@ class GeocodeCity
   private
 
   def auth_client
-    @auth_service ||= AuthService::Client.new(url: Settings.microservices.geocoder)
+    @auth_service ||= GeocodingService::Client.new(url: Settings.microservices.geocoder)
   end
 end

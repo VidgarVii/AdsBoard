@@ -14,7 +14,7 @@ describe AdsBoard, type: :request do
 
     before do
       allow(service_client).to receive(:auth).with('valid.token').and_return(1)
-      allow(AuthService::Client).to receive(:new).and_return(service_client)
+      allow(GeocodingService::Client).to receive(:new).and_return(service_client)
       allow(service_client).to receive(:geocode).with('Che').and_return({ 'coordinates' => { 'lat' => 56, 'lon' => 47 } })
 
       header 'Authorization', "Bearer #{token}"
