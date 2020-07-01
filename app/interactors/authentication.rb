@@ -24,6 +24,6 @@ class Authentication
   end
 
   def auth_client
-    @auth_service ||= AuthService::Client.new(url: Settings.microservices.auth)
+    @auth_service ||= AuthService::Client.new
   end
 end
