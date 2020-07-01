@@ -11,7 +11,7 @@ describe GeocodeCity do
 
       before do
         allow(service_client).to receive(:geocode).with('Чебоксары').and_return({ 'coordinates' => { 'lat' => 56, 'lon' => 47 } })
-        allow(AuthService::Client).to receive(:new).and_return(service_client)
+        allow(GeocodingService::Client).to receive(:new).and_return(service_client)
       end
 
       it { is_expected.to be_success }
@@ -23,7 +23,7 @@ describe GeocodeCity do
 
       before do
         allow(service_client).to receive(:geocode).with(ad.city).and_return({ 'errors' => 'Some error' })
-        allow(AuthService::Client).to receive(:new).and_return(service_client)
+        allow(GeocodingService::Client).to receive(:new).and_return(service_client)
       end
 
       it { is_expected.not_to be_a_success }
