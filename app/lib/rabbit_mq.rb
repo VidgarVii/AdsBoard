@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module RabbitMQ
+module RabbitMq
   extend self
 
   @mutex = Mutex.new

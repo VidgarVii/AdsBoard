@@ -24,6 +24,6 @@ class Authentication
   end
 
   def auth_client
-    @auth_service ||= AuthService::Client.new
+    @auth_client ||= AuthService::RpcClient.fetch
   end
 end
