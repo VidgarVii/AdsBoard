@@ -12,6 +12,7 @@ gem 'sinatra-i18n'
 gem 'faraday'
 gem 'faraday_middleware'
 gem 'config'
+gem 'bunny'                # Client for RabbitMQ
 gem 'derailed_benchmarks', group: :development
 
 # DB
