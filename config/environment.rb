@@ -14,6 +14,8 @@ require 'sinatra/i18n'
 
 require_relative 'application'
 require_relative 'ads_board'
+require_relative 'initializers/logger'
+
 require_relative '../app/interactors/save_coordinates_city_in_ad'
 require_relative '../app/interactors/validate_params'
 require_relative '../app/contracts/new_ad_contract'

@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
+require 'sinatra/custom_logger'
+
 class Application < Sinatra::Base
+  helpers Sinatra::CustomLogger
+
   register Sinatra::Contrib
   register Sinatra::ActiveRecordExtension
 

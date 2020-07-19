@@ -13,7 +13,8 @@ gem 'faraday'
 gem 'faraday_middleware'
 gem 'config'
 gem 'derailed_benchmarks', group: :development
-
+gem 'rack-ougai'           # Logger
+gem 'rack-request-id'      # Generation request_id for logging
 # DB
 gem 'pg'
 gem 'sinatra-activerecord'
